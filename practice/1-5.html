@@ -1,0 +1,33 @@
+<form class="apply" action="/apply" method="post">
+    <h2>線上申辦 Sky 回饋卡</h2>
+
+    <!-- 1. 姓名（必填） -->
+    <label for="name">姓名</label>
+    <input id="name" type="text" name="name" required>
+    <br>
+
+    <!-- 2. Email（必填，email 格式） -->
+    <label for="mail">Email</label>
+    <input id="mail" type="email" name="mail" required>
+    <br>
+
+    <!-- 3. 手機（必填，09 開頭共 10 碼） -->
+    <label for="phone">手機</label>
+    <input title="請輸入 09 開頭的 10 碼手機號碼" id="phone" type="tel" name="phone" pattern="09[0-9]{8}" autocomplete="tel"
+        inputmode="numeric" required>
+    <br>
+
+    <!-- 4. 卡面：經典藍／玫瑰金／極光黑，三選一 -->
+    <fieldset>
+        <legend>卡面</legend>
+        <label><input type="radio" name="card" value="blue" checked>經典藍</label>
+        <label><input type="radio" name="card" value="gold">玫瑰金</label>
+        <label><input type="radio" name="card" value="black">極光黑</label>
+    </fieldset>
+    <br>
+
+    <!-- 5. 我已閱讀並同意條款（必填） -->
+    <label><input type="checkbox" name="agree" required>我已閱讀並同意條款（必填）</label>
+    <!-- 6. 送出按鈕 -->
+    <button type="submit">送出</button>
+</form>
